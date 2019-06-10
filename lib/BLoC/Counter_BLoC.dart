@@ -22,7 +22,7 @@ class Counter_BLoC{
 
     void _updateCounter(Counter_BLoC_event event){
 
-      if(event is IncreamentEvent){
+      if(event is IncrementEvent){
         _counter++;
       }else{
         _counter--;
