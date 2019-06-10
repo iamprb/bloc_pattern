@@ -52,10 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'You have pushed the button this many times:',
-                  ),
-                  Text(
-                    '${snapshot.data}',
+                    'You have pushed the button ${snapshot.data} times:',
                     style: Theme.of(context).textTheme.display1,
                   ),
                 ],
@@ -64,7 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
         ),
       ),
-
       floatingActionButton: FloatingActionButton(
         onPressed:()=> _bloc.counterEventSink.add(IncreamentEvent()),
         tooltip: 'Increment',

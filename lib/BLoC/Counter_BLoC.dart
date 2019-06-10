@@ -16,11 +16,11 @@ class Counter_BLoC{
     Sink<Counter_BLoC_event> get counterEventSink=>_counterEventController.sink;
 
     Counter_BLoC(){
-      _counterEventController .stream.listen(_mapEventtoState);
+      _counterEventController .stream.listen(_updateCounter);
     }
 
 
-    void _mapEventtoState(Counter_BLoC_event event){
+    void _updateCounter(Counter_BLoC_event event){
 
       if(event is IncreamentEvent){
         _counter++;
